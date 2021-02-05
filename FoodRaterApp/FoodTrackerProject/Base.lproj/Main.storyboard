@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OTY-b3-LOf">
-                                <rect key="frame" x="20" y="75" width="151" height="104.5"/>
+                                <rect key="frame" x="20" y="75" width="374" height="104.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGE-Ci-CvN">
                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="20.5"/>
@@ -25,27 +25,37 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Meal Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CB9-bx-3MH">
-                                        <rect key="frame" x="0.0" y="30.5" width="151" height="34"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEr-jG-5eo">
                                         <rect key="frame" x="0.0" y="74.5" width="151" height="30"/>
                                         <state key="normal" title="Set Default Label Text"/>
+                                        <connections>
+                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0iJ-ce-x5S"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="CB9-bx-3MH" secondAttribute="trailing" id="0Td-PP-5zY"/>
+                                    <constraint firstAttribute="trailing" secondItem="CB9-bx-3MH" secondAttribute="trailing" id="U75-WY-BTT"/>
+                                    <constraint firstItem="CB9-bx-3MH" firstAttribute="leading" secondItem="OTY-b3-LOf" secondAttribute="leading" id="XP5-fk-e7D"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="OTY-b3-LOf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="T6k-gs-jX0"/>
-                            <constraint firstItem="OTY-b3-LOf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="Wqz-1z-CS6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OTY-b3-LOf" secondAttribute="trailing" constant="20" id="EVJ-eR-dSe"/>
+                            <constraint firstItem="OTY-b3-LOf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="dEk-tm-3HG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OTY-b3-LOf" secondAttribute="trailing" constant="20" id="gGt-mn-6O5"/>
+                            <constraint firstItem="OTY-b3-LOf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zbK-Qw-16u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mealNameLabel" destination="mGE-Ci-CvN" id="afY-5K-UIW"/>
+                        <outlet property="nameTextField" destination="CB9-bx-3MH" id="qt1-wc-lIp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
