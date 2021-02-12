@@ -2,8 +2,8 @@
 //  SceneDelegate.swift
 //  FoodTrackerProject
 //
-//  Created by ASUMH COMPUTER on 2/4/21.
-//  Copyright © 2021 ASUMH COMPUTER. All rights reserved.
+//  Created by Michael Barnes on 2/10/21.
+//  Copyright © 2021 Michael Barnes All rights reserved.
 //
 
 import UIKit
